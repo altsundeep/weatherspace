@@ -1,38 +1,278 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300,900;1,200&display=swap");
+
+.aside {
+  max-width: 325px;
+  height: auto;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.flex {
+  display: flex;
+  justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search {
+  padding: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input[type="text"] {
+  padding: 12px 14px;
+  width: 100%;
+  border-radius: 7px;
+  outline: none;
+  border: transparent;
+  font-size: 14px;
+  font-family: "Poppins";
+  font-weight: 300;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.41);
+}
+
+.show--weather {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+.show--temp-today {
+  margin-bottom: 25px;
+  font-size: 75px;
+  font-family: "poppins";
+  font-weight: 600;
+}
+
+.centi {
+  font-size: 36px;
+  font-family: "poppins";
+  font-weight: 300;
+}
+
+.date,
+.city--name,
+.deg {
+  font-size: 18px;
+  font-family: "poppins";
+  font-weight: 600;
+}
+.show--weather-status span {
+  font-size: 18px;
+  font-family: "poppins";
+  font-weight: 600;
+}
+
+.show--date,
+.show--city-photo,
+.show--weather-status {
+  margin-bottom: 35px;
+}
+.show--city-photo {
+  margin-top: 35px;
+}
+
+.wicon {
+  height: 100px;
+}
+
+.inline--data {
+  display: flex;
+  margin: 0.5rem;
+}
+
+.flex--center {
+  justify-content: center;
+}
+
+.searchbar {
+  display: flex;
+  position: relative;
+}
+
+.searchbar button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 75%;
+  bottom: 50px;
+  margin: auto;
+  padding: 10px;
+  color: blue;
+  font-size: 16px;
+  transition: transform 0.2s;
+}
+
+.searchbar button:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+.input-warn {
+  display: flex;
+  justify-content: center;
+  background-color: red;
+}
+
+.hide-cl {
+  visibility: hidden;
+}
+
+.headline {
+  padding-left: 25px;
+}
+
+.aside {
+  width: 370px;
+  height: auto;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.41);
+}
+
+.container {
+  display: flex;
+  width: 1333px;
+  height: auto;
+  margin: 15px auto;
+}
+
+.card .card-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.aside-right {
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 990px;
+  height: auto;
+  background-color: floralwhite;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.41);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.cardx {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cardx .card {
+  margin: 0.9rem;
+  width: 250px;
+  height: 150px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.41);
+}
+
+.card-text {
+  font-size: 60px;
+  font-family: "poppins";
+  font-weight: bold;
+}
+
+/* weeks data [start] */
+
+.card {
+  margin: 0.9rem;
+  width: 110px;
+  height: 140px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.41);
+}
+
+.card__dayname {
+  text-align: center;
+  font-size: 18px;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.card__temp {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.card__degree-text {
+  font-size: 15px;
+  font-weight: normal;
+}
+
+/* cardx headings */
+
+.cardx__headings {
+  padding-top: 15px;
+}
+
+/* Mobile View [Start] */
+
+@media only screen and (max-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .aside {
+    max-width: 100%;
+    display: flex;
+  }
+
+  .searchbar {
+    display: block;
+    width: 100%;
+  }
+
+  .searchbar button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 0;
+    top: 75%;
+    bottom: 50px;
+    margin: auto;
+    padding: 10px;
+    color: blue;
+    font-size: 16px;
+    transition: transform 0.2s;
+  }
+
+  .aside-right {
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .search {
+    padding: 15px;
+  }
+
+  input[type="text"] {
+    padding: 12px 14px;
+    width: 100%;
+    border-radius: 7px;
+    outline: none;
+    border: transparent;
+    font-size: 14px;
+    font-family: "Poppins";
+    font-weight: 300;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.41);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.41);
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.41);
   }
 }
